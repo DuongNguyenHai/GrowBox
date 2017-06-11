@@ -1,0 +1,54 @@
+Install on raspberry pi :
+
+1. Install apache
+
+$ sudo apt-get install apache2
+
+$ cd '/var'
+$ sudo chown -R pi:pi www
+
+2. Install php
+
+$ sudo apt-get install php5 libapache2-mod-php5 php5-dev php-pear
+
+3. Install PHP-driver for mongo
+
+http://php.net/manual/en/mongodb.installation.pecl.php
+
+$ sudo pecl install mongodb
+
+$ sudo nano /etc/php5/apache2/php.ini
+add extension=mongodb.so at the ending of the file
+
+perhaps also need change at apache2
+[
+A$ sudo nano /etc/php5/apache2/php.ini
+add extension=mongodb.so at the ending of the file
+]
+
+// install composer
+look at https://getcomposer.org/doc/00-intro.md
+
+
+4. Install mongo
+
+// version 2.4
+$ sudo apt-get install mongodb-server
+
+// version 3.0.9
+http://andyfelong.com/2016/01/mongodb-3-0-9-binaries-for-raspberry-pi-2-jessie/
+
+5. Install mongo-c-driver. Must be version 1.5 because PHP-driver just support 1.5
+
+$ wget https://github.com/mongodb/mongo-c-driver/releases/download/1.5.5/mongo-c-driver-1.5.5.tar.gz
+$ tar xzf mongo-c-driver-1.5.5.tar.gz
+$ cd mongo-c-driver-1.5.5
+$ ./configure
+$ make
+$ sudo make install
+
+7. Turn on I2C, SPI peripheral
+
+
+8. 
+

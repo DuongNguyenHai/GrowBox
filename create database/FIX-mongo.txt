@@ -1,0 +1,14 @@
+// Fix mongo
+
+sudo service mongodb stop
+sudo rm /var/lib/mongodb/mongod.lock
+mongod -repair
+sudo service mongodb start
+sudo service mongodb status
+// wait few seconds
+mongo
+
+perhaps [
+sudo mongod --dbpath /var/lib/mongodb/ --repair
+sudo mongod --dbpath /var/lib/mongodb/ --journal
+]

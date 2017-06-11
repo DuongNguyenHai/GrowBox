@@ -1,0 +1,66 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  color: #FFF;
+  background: #114654;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #114654 1%, #65a073 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #114654 1%, #65a073 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  /* background: linear-gradient(to right, #114654 1%, #65a073 100%); */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#114654', endColorstr='#65a073', GradientType=1);
+  /* IE6-9 */
+}
+
+nav {
+	background: #282b2e;
+}
+
+.verl-margin {
+	margin-top : 10px;
+	margin-bottom: 10px;
+}
+
+.nav {
+	height: 70px;
+}
+.nav h1 {
+	font-size: 25px;
+	line-height: 70px;
+	color: #fff;
+	font-weight: 300;
+}
+
+.b-section-title {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 7px;
+  font-size: 18px;
+  background: #30675F;
+  color: #FFFFFF;
+  border-radius: 3px;
+}
+
+.b-title {
+	line-height: 1.2em;
+	text-align: center;
+	font-weight: 500;
+}
+
+.sec-graph {
+  margin-top: 70px;
+}
+
+.title-research {
+  margin-bottom: 20px;
+}
+
+.title-research h3 {
+  font-weight: 300;
+  font-size: 16px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Graph Report</title>
+   <link rel="stylesheet" type="text/css" href="css/set.mini.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  <!-- <script src="js/highcharts.js"></script> -->
+  <script src="scripts/js/highstock.js"></script>
+  <script src="scripts/js/modules/exporting.js"></script>
+  <script src="scripts/js/themes/grid-light.js"></script>
+  <!-- <script src="js/themes/sand-signika.js"></script> -->
+  <script type="text/javascript" src="scripts/report.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/highcharts.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body>
+<nav>
+   <div class="container">
+      <div class="nav">
+         <h1>Biểu đồ</h1>
+      </div>
+   </div>
+</nav>
+<div class="main">
+   <section class="sec-graph">
+      <div class="container">
+         <div class="row">
+           <div class="col-xs-12 verl-margin">
+              <div class="b-section-title b-title">Tất cả các điểm nhiệt độ</div>
+              <div id="total"></div>
+           </div>
+           <div class="col-xs-12 verl-margin">
+            <div class="b-section-title b-title">Nhiệt độ trong hộp</div>
+             <div id="graphInbox"></div>
+           </div>
+           <div class="col-xs-12 verl-margin">
+            <div class="b-section-title b-title">Nhiệt độ bên trái bình nhiệt</div>
+             <div id="graphLeftSide"></div>
+           </div>
+            <div class="col-xs-12 verl-margin">
+               <div class="b-section-title b-title">Nhiệt độ bên phải bình nhiệt</div>
+               <div id="graphRightSide"></div>
+            </div>
+            <div class="col-xs-12 verl-margin">
+               <div class="b-section-title b-title">Độ ẩm trong hộp</div>
+               <div id="graphHumidity"></div>
+            </div>
+           <div class="clearfix"></div>
+         </div>
+      </div>
+   </section>
+</div>
+<script>
+
+window.onload = function() {
+
+  var names = ['LEFT', 'BOX', 'RIGHT'];
+  var fileLog = ["data/test-hot-v1/left_side.txt", "data/test-hot-v1/inbox.txt", "data/test-hot-v1/right_side.txt", "time.txt"];
+
+  loadData(fileLog, names);
+
+  createChartTotal("total", fileLog, 3, '°C');
+  creatOneLine("graphInbox", fileLog, 1, '°C');
+  creatOneLine("graphLeftSide", fileLog, 0, '°C');
+  creatOneLine("graphRightSide", fileLog, 2, '°C');
+
+};
+
+</script>
+</body>
+</html>
